@@ -1,0 +1,301 @@
+/* ===========================================================
+   Register.css — Freelancer Platform Registration
+   =========================================================== */
+
+:root {
+  --rg-bg-1: #0f0c29;
+  --rg-bg-2: #302b63;
+  --rg-bg-3: #24243e;
+  --rg-accent: #7c5cff;
+  --rg-accent-2: #ff8a5c;
+  --rg-accent-soft: rgba(124, 92, 255, 0.18);
+  --rg-text: #f5f3ff;
+  --rg-text-muted: #b8b3d6;
+  --rg-card-bg: rgba(255, 255, 255, 0.06);
+  --rg-card-border: rgba(255, 255, 255, 0.12);
+  --rg-input-bg: rgba(255, 255, 255, 0.05);
+  --rg-input-border: rgba(255, 255, 255, 0.14);
+  --rg-error: #ff6b8b;
+  --rg-radius: 16px;
+   --color-divider: #ddd;
+   --color-social-hover: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.register-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  background: radial-gradient(circle at 15% 20%, var(--rg-bg-2), transparent 45%),
+              radial-gradient(circle at 85% 80%, var(--rg-accent-soft), transparent 50%),
+              linear-gradient(160deg, var(--rg-bg-1) 0%, var(--rg-bg-3) 60%, var(--rg-bg-1) 100%);
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-page::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 138, 92, 0.35), transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.register-page::after {
+  content: "";
+  position: absolute;
+  bottom: -140px;
+  left: -100px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 92, 255, 0.4), transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.register-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  background: var(--rg-card-bg);
+  border: 1px solid var(--rg-card-border);
+  border-radius: var(--rg-radius);
+  padding: 40px 36px 32px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    0 1px 0 rgba(255, 255, 255, 0.08) inset;
+  animation: rg-rise 0.5s ease-out;
+}
+
+@keyframes rg-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.register-title {
+  margin: 0 0 6px;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--rg-text);
+  background: linear-gradient(90deg, #ffffff, var(--rg-accent) 120%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.register-subtitle {
+  margin: 0 0 28px;
+  font-size: 0.92rem;
+  color: var(--rg-text-muted);
+  line-height: 1.4;
+}
+
+.register-fields {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-field {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--rg-text-muted);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  color: var(--rg-text);
+  background: var(--rg-input-bg);
+  border: 1px solid var(--rg-input-border);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form-field input::placeholder {
+  color: rgba(245, 243, 255, 0.35);
+}
+
+.form-field input:hover,
+.form-field select:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: var(--rg-accent);
+  background: rgba(124, 92, 255, 0.08);
+  box-shadow: 0 0 0 3px var(--rg-accent-soft);
+}
+
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23b8b3d6'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+.form-field select option {
+  background: var(--rg-bg-3);
+  color: var(--rg-text);
+}
+
+.input-error {
+  border-color: var(--rg-error) !important;
+  background: rgba(255, 107, 139, 0.08) !important;
+}
+
+.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(255, 107, 139, 0.18) !important;
+}
+
+.field-error {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--rg-error);
+  animation: rg-shake 0.25s ease;
+}
+
+@keyframes rg-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 13px 16px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--rg-accent) 0%, #5a3fe0 100%);
+  box-shadow: 0 8px 24px rgba(124, 92, 255, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(124, 92, 255, 0.45);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.register-footer {
+  margin: 22px 0 0;
+  text-align: center;
+  font-size: 0.86rem;
+  color: var(--rg-text-muted);
+}
+
+.register-footer a {
+  color: var(--rg-accent-2);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.register-footer a:hover {
+  color: #ffb088;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .register-card {
+    padding: 30px 22px 26px;
+    border-radius: 14px;
+  }
+
+  .register-title {
+    font-size: 1.4rem;
+  }
+}
+
+.form-btn--social {
+  display: flex;
+  flex-direction: column;   /* Stack icon and text vertically */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 110px;
+  padding: 16px;
+
+  border: 1px solid #ddd;
+  /*border-radius: 999px;*/
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-btn--social:hover {
+  align-items: center;
+  background: #f5f5f5;
+}
+
+.btn-icon {
+  align-items: center;
+  width: 28px;
+  height: 28px;
+}
+
+.form-btn--social span {
+  font-size: 14px;
+  font-weight: 500;
+}
