@@ -1,6 +1,7 @@
 import { useAuth } from "../contexts/AuthContext";
 import Dashboard from "../components/Dashboard";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../stylesheets/ClientDashboard.css";
 import job from "../assets/images/jobs.png";
 import con from "../assets/images/contracts.png";
@@ -32,6 +33,8 @@ export default function ClientDashboard() {
           </header>
 
           <Dashboard categories={categories} />
+
+          <Footer />
         </section>
       </main>
     </>

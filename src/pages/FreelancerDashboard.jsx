@@ -32,6 +32,8 @@ export default function FreelancerDashboard() {
           </header>
 
           <Dashboard categories={categories} />
+
+          <Footer />
         </section>
       </main>
     </>

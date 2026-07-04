@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 import "../stylesheets/LandingPage.css";
 
 const STAGES = ["Sent", "Signed", "Paid"];
@@ -123,13 +124,7 @@ export default function LandingPage() {
         <Link to="/register" className="btn btn-primary">Create your account</Link>
       </section>
 
-      <footer className="landing-footer">
-        <span>© {new Date().getFullYear()} NexWork</span>
-        <nav className="landing-footer__links">
-          <Link to="/login">Log in</Link>
-          <Link to="/register">Register</Link>
-        </nav>
-      </footer>
+      <Footer />
     </main>
   );
 }
