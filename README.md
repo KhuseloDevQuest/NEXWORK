@@ -123,42 +123,7 @@ npm run dev
 
 ## 💡 Vision
 
-NexWork aims to simplify how digital work is discovered, managed, and delivered by combining structured workflows (milestones, contracts) with real-time collaboration tools.(base) vmuser@reference2025:~/Desktop/NexWork$ echo "# NEXWORK" >> README.md
-(base) vmuser@reference2025:~/Desktop/NexWork$ git init
-hint: Using 'master' as the name for the initial branch. This default branch name
-hint: is subject to change. To configure the initial branch name to use in all
-hint: of your new repositories, which will suppress this warning, call:
-hint: 
-hint:   git config --global init.defaultBranch <name>
-hint: 
-hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-hint: 'development'. The just-created branch can be renamed via this command:
-hint: 
-hint:   git branch -m <name>
-Initialized empty Git repository in /home/vmuser/Desktop/NexWork/.git/
-(base) vmuser@reference2025:~/Desktop/NexWork$ git add .
-(base) vmuser@reference2025:~/Desktop/NexWork$ git commit -m "First Commit of the Project"
-Author identity unknown
-
-*** Please tell me who you are.
-
-Run
-
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
-
-to set your account's default identity.
-Omit --global to set the identity only in this repository.
-
-fatal: unable to auto-detect email address (got 'vmuser@reference2025.(none)')
-(base) vmuser@reference2025:~/Desktop/NexWork$ git config --global user.email 2729931@students.wits.ac.za
-(base) vmuser@reference2025:~/Desktop/NexWork$ git config --global user.email "2729931@students.wits.ac.za"
-(base) vmuser@reference2025:~/Desktop/NexWork$ git config --global user.name "KhuseloDevQuest"
-(base) vmuser@reference2025:~/Desktop/NexWork$ git branch -M main
-(base) vmuser@reference2025:~/Desktop/NexWork$ git remote add origin https://github.com/KhuseloDevQuest/NEXWORK.git
-(base) vmuser@reference2025:~/Desktop/NexWork$ git push -u origin main
-error: src refspec main does not match any
-error: failed to push some refs to 'https://github.com/KhuseloDevQuest/NEXWORK.git'
+NexWork aims to simplify how digital work is discovered, managed, and delivered by combining structured workflows (milestones, contracts) with real-time collaboration tools.
 
 ---
 
