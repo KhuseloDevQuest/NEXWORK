@@ -1,0 +1,52 @@
+/* ===========================================================
+   ClientDashboard.css — page shell and greeting only.
+   Card and grid styles live in Dashboard.css.
+   =========================================================== */
+
+:root {
+  --cd-bg-1: #0f0c29;
+  --cd-bg-3: #1a1733;
+  --cd-accent-soft: rgba(124, 92, 255, 0.16);
+  --cd-text: #f5f3ff;
+  --cd-text-muted: #b8b3d6;
+}
+
+.client-main {
+  min-height: calc(100vh - 64px);
+  background: radial-gradient(circle at 10% 10%, rgba(48, 43, 99, 0.7), transparent 45%),
+              radial-gradient(circle at 90% 90%, var(--cd-accent-soft), transparent 50%),
+              linear-gradient(160deg, var(--cd-bg-1) 0%, var(--cd-bg-3) 60%, var(--cd-bg-1) 100%);
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--cd-text);
+  padding: 48px 40px 80px;
+}
+
+.categories {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.categories__heading {
+  margin: 0 0 32px;
+}
+
+.categories__title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+  color: var(--cd-text);
+}
+
+.categories__subtitle {
+  font-size: 0.95rem;
+  color: var(--cd-text-muted);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .client-main {
+    padding: 32px 20px 60px;
+  }
+}
