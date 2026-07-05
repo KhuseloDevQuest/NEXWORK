@@ -13,10 +13,11 @@
   * Cloud Firestore (Database)
   * Firebase Storage (File uploads)
 * **Hosting/Deployment:** Azure Static Web Apps
+* **Link:** https://salmon-dune-05409a310.7.azurestaticapps.net/
 
 ---
 
-## 📦 Features (Phase 1 - Current)
+## 📦 Features (Phase 1)
 
 * User authentication (Register/Login)
 * Role-based access (Client / Freelancer)
@@ -28,12 +29,23 @@
 
 ---
 
+## 📦 Features (Phase 2 - Current)
+
+* Job posting system
+* Job browsing & search
+* Proposal submissions
+
+---
+
 ## 🏗️ Project Structure
 
 ```
 src/
 │
 ├── components/
+|   ├── Dashboard.jsx
+|   ├── Footer.jsx
+|   ├── Header.jsx
 |   ├── ProtectedRoute.jsx
 |    
 |
@@ -45,7 +57,9 @@ src/
 │   ├── Register.jsx
 |   ├── CompleteProfile.jsx
 │   ├── ClientDashboard.jsx
-│   └── FreelancerDashboard.jsx
+|   ├── ClientJobs.jsx
+|   ├── FreelancerDashboard.jsx
+│   └── FreelancerJobs.jsx
 │
 ├── hooks/
 |   ├── useRoleRedirect.js
@@ -57,7 +71,11 @@ src/
 |   ├── authService.js
 |
 ├── stylesheets/
+|   ├── ClientDashboard.css
 |   ├── CompletProfile.css
+|   ├── Dashboard.css
+|   ├── Footer.css
+|   ├── Header.css
 |   ├── LandingPage.css
 |   ├── Register.css
 │
