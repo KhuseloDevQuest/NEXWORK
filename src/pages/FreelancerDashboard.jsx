@@ -9,7 +9,7 @@ import pay from "../assets/images/payments.png";
 import stat from "../assets/images/quickstats.png";
 
 const categories = [
-  { id: 1, name: "Jobs",               path: "/client-jobs",        image: job  },
+  { id: 1, name: "Jobs",               path: "/freelancer-jobs",        image: job  },
   { id: 2, name: "Contracts & Tasks",  path: "/con-tasks-clients",  image: con  },
   { id: 3, name: "Payments",           path: "/client-payments",    image: pay  },
   { id: 4, name: "Quick Stats",        path: "/q-stats",            image: stat },
